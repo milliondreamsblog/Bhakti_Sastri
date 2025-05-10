@@ -1,0 +1,10 @@
+@layer utilities {
+    .custom-scrollbar-hide {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .custom-scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
