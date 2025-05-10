@@ -37,7 +37,7 @@ function App() {
 
         {/* Marksheet Section */}
         {selectedStudent && (
-          <div className="mt-10 transition-all duration-500 animate-fadeIn">
+          <div className="mt-10 transition-all duration-500 animate-fadeIn w-920">
             <Marksheet student={selectedStudent} />
           </div>
         )}
