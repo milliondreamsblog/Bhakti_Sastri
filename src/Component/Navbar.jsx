@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import myImage from '../assets/1.png';
 import myImage2 from '../assets/2.png';
 

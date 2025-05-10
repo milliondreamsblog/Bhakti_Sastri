@@ -2,9 +2,10 @@ import { useState } from 'react';
 import './App.css';
 import { Searchbox } from './Component/Searchbox';
 import { Searchresult } from './Component/Searchresult';
-import { Navbar } from './Component/navbar';
 import { Hero } from './Component/Hero';
 import { Marksheet } from './Component/Marksheet';
+
+import { Navbar } from './Component/Navbar';
 
 function App() {
   const [resultList, setResultList] = useState([]);
