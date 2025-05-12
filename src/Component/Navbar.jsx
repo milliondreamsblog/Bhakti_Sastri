@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import myImage from '../assets/1.png';
 import myImage2 from '../assets/2.png';
 
-export const navbar = () => {
+export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
 

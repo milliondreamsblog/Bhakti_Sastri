@@ -4,7 +4,7 @@ import { Searchbox } from './Component/Searchbox';
 import { Searchresult } from './Component/Searchresult';
 import { Hero } from './Component/Hero';
 import { Marksheet } from './Component/Marksheet';
-import { Navbar } from './Component/navbar';
+import { Navbar } from './Component/Navbar';
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Hero />
 
         {/* Search Section */}
-        <div className="mt-8 w-full max-w-lg">
+        <div className="mt-8 min-w-full max-w-lg">
           <Searchbox setResultList={setResultList} />
 
           {resultList.length > 0 && (
@@ -37,7 +37,7 @@ function App() {
 
         {/* Marksheet Section */}
         {selectedStudent && (
-          <div className="mt-10 transition-all duration-500 animate-fadeIn w-full ">
+          <div className="mt-10 transition-all duration-500 animate-fadeIn min-w-full max-w-lg ">
             <Marksheet student={selectedStudent} />
           </div>
         )}
