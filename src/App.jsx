@@ -5,7 +5,7 @@ import { Searchresult } from './Component/Searchresult';
 import { Hero } from './Component/Hero';
 import { Marksheet } from './Component/Marksheet';
 import { Navbar } from './Component/Navbar';
-import imagebg from './assets/bg.jpg';
+import imagebg from './assets/image.png';
 
 function App() {
   const [resultList, setResultList] = useState([]);
@@ -17,42 +17,45 @@ function App() {
   };
 
   return (
+  <>
+    <Navbar/> 
     <div
-      style={{ backgroundImage: `url($({imagebg})})` }}
-      className="bg-cover bg-center min-h-screen bg-gradient-to-br from-slate-100 to-gray-300 flex flex-col"
-    >
+        style={{ backgroundImage: `url(${imagebg})` }}
+        className="bg-cover bg-center min-h-screen bg-gradient-to-br from-slate-100 to-gray-300 flex flex-col">
 
 
-      {/* Navbar */}
-      <Navbar/>
+        {/* Navbar */}
+        
 
-      {/* Main Content */}
-      <div className="pt-24 flex-1 w-full flex flex-col items-center px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <Hero />
+        {/* Main Content */}
+        <div className="pt-24 flex-1 w-full flex flex-col items-center px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <Hero />
 
-        {/* Search Section */}
-        <div className="mt-8 w-full max-w-lg">
-          <Searchbox setResultList={setResultList} />
+          {/* Search Section */}
+          <div className="mt-8 w-full max-w-lg">
+            <Searchbox setResultList={setResultList} />
 
-          {resultList.length > 0 && (
-            <Searchresult resultList={resultList} onSelect={handleSelect} />
+            {resultList.length > 0 && (
+              <Searchresult resultList={resultList} onSelect={handleSelect} />
+            )}
+          </div>
+
+          {/* Marksheet Section */}
+          {selectedStudent && (
+            <div className="mt-10 transition-all duration-500 animate-fadeIn min-w-full max-w-lg ">
+              <Marksheet student={selectedStudent} />
+            </div>
           )}
         </div>
 
-        {/* Marksheet Section */}
-        {selectedStudent && (
-          <div className="mt-10 transition-all duration-500 animate-fadeIn min-w-full max-w-lg ">
-            <Marksheet student={selectedStudent} />
-          </div>
-        )}
-      </div>
-
-      {/* Footer */}
-      <footer className="py-4 text-center text-gray-500 text-sm mt-10">
-        © {new Date().getFullYear()} © Iskcon Kanpur 2025 • Licenses • Terms • Privacy
-      </footer>
+        {/* Footer */}
+        <footer className="py-4 text-center text-gray-500 text-sm mt-10">
+          © {new Date().getFullYear()} © Iskcon Kanpur 2025 • Licenses • Terms • Privacy
+        </footer>
     </div>
+  </>
+      
   );
 }
 

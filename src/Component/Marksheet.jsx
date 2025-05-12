@@ -135,12 +135,12 @@ export const Marksheet = ({ student })  => {
           </div>
           
           <ScoreItem 
-            label="C.B.E Unit 1 (CH 1-3)" 
+            label="C.B.E Unit 1 (BG:CH 1-3)" 
             score={student["C.B.E Unit 1 (CH 1,2,3) out of 50"]} 
             total={50}
             isExpanded={expandedSection === "unit1"}
             toggleExpand={() => toggleSection("unit1")}
-            details="Covers introduction to Bhagavad Gita, Chapters 1-3 focusing on fundamental concepts."
+            details="Closed book examination."
           />
           <ScoreItem 
             label="O.B.E Unit 1" 
@@ -148,15 +148,15 @@ export const Marksheet = ({ student })  => {
             total={10}
             isExpanded={expandedSection === "obe1"}
             toggleExpand={() => toggleSection("obe1")}
-            details="Oral examination on Unit 1 material, focusing on verse recitation and comprehension."
+            details="Open book examination"
           />
           <ScoreItem 
-            label="C.B.E Unit 2 (CH 4-6)" 
+            label="C.B.E Unit 2 (BG:CH 4-6)" 
             score={student["C.B.E Unit 2 CH(4,5,6) out of 50"]} 
             total={50}
             isExpanded={expandedSection === "unit2"}
             toggleExpand={() => toggleSection("unit2")}
-            details="Covers intermediate teachings from Bhagavad Gita, Chapters 4-6 on karma yoga and meditation."
+            details="Closed book examination."
           />
           <ScoreItem 
             label="O.B.E Unit 2" 
@@ -164,7 +164,7 @@ export const Marksheet = ({ student })  => {
             total={10}
             isExpanded={expandedSection === "obe2"}
             toggleExpand={() => toggleSection("obe2")}
-            details="Oral examination on Unit 2 material, including practical applications of teachings."
+            details="Open book examination."
           />
           <ScoreItem 
             label="Sloka Test 1" 
@@ -172,7 +172,7 @@ export const Marksheet = ({ student })  => {
             total={10}
             isExpanded={expandedSection === "sloka"}
             toggleExpand={() => toggleSection("sloka")}
-            details="Assessment of memorization and pronunciation of key verses from Units 1 and 2."
+            details="Sloka Test"
           />
         </div>
       </div>
@@ -219,16 +219,15 @@ export const Marksheet = ({ student })  => {
         </div>
         
         {/* Interactive percentage bar */}
-        <div className="mt-4 relative">
-          <div className="flex justify-between text-xs text-amber-700 mb-1">
-            <span>0%</span>
-            <span className="font-medium">{percentage}%</span>
-            <span>100%</span>
+        <div className="">
+          <div className="">
+            <span></span>
+            <span className=""></span>
+            <span></span>
           </div>
-          <div className="h-2 bg-amber-100 rounded-full overflow-hidden">
+          <div className="">
             <div 
-              className="h-full bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-1000 ease-out"
-              style={{ width: `${percentage}%` }}
+              
             ></div>
           </div>
           

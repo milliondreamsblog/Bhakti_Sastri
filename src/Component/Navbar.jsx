@@ -56,7 +56,7 @@ export const Navbar = () => {
         <div className="relative">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
           <p className={`font-sans ${isMobile ? 'text-lg' : 'text-xl md:text-2xl'} font-semibold tracking-wide text-amber-700 mt-2 pt-2 transition-colors duration-300`}>
-            Online Bhakti Sashtri
+            Online Bhakti Shastri
           </p>
         </div>
       </div>
