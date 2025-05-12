@@ -4,7 +4,8 @@ import { Searchbox } from './Component/Searchbox';
 import { Searchresult } from './Component/Searchresult';
 import { Hero } from './Component/Hero';
 import { Marksheet } from './Component/Marksheet';
-import { Navbar } from './Component/Navbar';
+import { Navbar } from './Component/navbar';
+
 
 function App() {
   const [resultList, setResultList] = useState([]);
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-gray-300 flex flex-col">
       {/* Navbar */}
-      <Navbar />
+      <Navbar/>
 
       {/* Main Content */}
       <div className="pt-24 flex-1 w-full flex flex-col items-center px-4 sm:px-6 lg:px-8">
