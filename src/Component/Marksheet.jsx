@@ -199,9 +199,9 @@ export const Marksheet = ({ student })  => {
           </div>
           
           <div className="flex items-center">
-            <span className="font-semibold text-amber-800 mr-3">Grade:</span>
+            <span className="font-semibold text-amber-800 mr-3"></span>
             <div className={`${color} font-bold text-lg group relative cursor-help`}>
-              {grade}
+              {}
               
               {/* Grade explanation tooltip - hidden during print */}
               <div className={`absolute -top-20 right-0 bg-white p-2 rounded-lg shadow-lg border border-amber-200 w-48 text-center invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-200 ${isPrinting ? 'hidden' : ''}`}>
@@ -233,11 +233,11 @@ export const Marksheet = ({ student })  => {
           </div>
           
           {/* Progress markers - hidden during print */}
-          <div className={`relative h-0 ${isPrinting ? 'hidden' : ''}`}>
+          {/* <div className={`relative h-0 ${isPrinting ? 'hidden' : ''}`}>
             <div className="absolute -top-1 left-[50%] h-4 w-px bg-amber-300" title="Passing"></div>
             <div className="absolute -top-1 left-[70%] h-4 w-px bg-amber-500" title="Average"></div>
             <div className="absolute -top-1 left-[90%] h-4 w-px bg-amber-700" title="Excellent"></div>
-          </div>
+          </div> */}
         </div>
       </div>
       
@@ -250,7 +250,7 @@ export const Marksheet = ({ student })  => {
           </div>
         ) : (
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-1 sm:space-y-0 sm:space-x-4">
-            <p>Please contact your counselor for any clarification.</p>
+            <p></p>
             <button 
               onClick={handlePrint}
               className="text-amber-800 hover:text-amber-600 font-medium flex items-center space-x-1 text-xs"
@@ -297,11 +297,11 @@ const ScoreItem = ({ label, score, total, isExpanded, toggleExpand, details }) =
   if (percentage >= 80) {
     progressColor = "bg-gradient-to-r from-green-400 to-green-500";
   } else if (percentage >= 60) {
-    progressColor = "bg-gradient-to-r from-yellow-400 to-yellow-500";
+    progressColor = "bg-gradient-to-r from-green-400 to-green-500";
   } else if (percentage >= 40) {
-    progressColor = "bg-gradient-to-r from-orange-400 to-orange-500";
+    progressColor = "bg-gradient-to-r from-green-400 to-green-500";
   } else {
-    progressColor = "bg-gradient-to-r from-red-400 to-red-500";
+    progressColor = "bg-gradient-to-r from-green-400 to-green-500";
   }
   
   return (

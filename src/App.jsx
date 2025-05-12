@@ -5,7 +5,7 @@ import { Searchresult } from './Component/Searchresult';
 import { Hero } from './Component/Hero';
 import { Marksheet } from './Component/Marksheet';
 import { Navbar } from './Component/Navbar';
-
+import imagebg from './assets/bg.jpg';
 
 function App() {
   const [resultList, setResultList] = useState([]);
@@ -17,7 +17,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-gray-300 flex flex-col">
+    <div
+      style={{ backgroundImage: `url($({imagebg})})` }}
+      className="bg-cover bg-center min-h-screen bg-gradient-to-br from-slate-100 to-gray-300 flex flex-col"
+    >
+
+
       {/* Navbar */}
       <Navbar/>
 
@@ -27,7 +32,7 @@ function App() {
         <Hero />
 
         {/* Search Section */}
-        <div className="mt-8 min-w-full max-w-lg">
+        <div className="mt-8 w-full max-w-lg">
           <Searchbox setResultList={setResultList} />
 
           {resultList.length > 0 && (
@@ -45,7 +50,7 @@ function App() {
 
       {/* Footer */}
       <footer className="py-4 text-center text-gray-500 text-sm mt-10">
-        © {new Date().getFullYear()} Student Result App
+        © {new Date().getFullYear()} © Iskcon Kanpur 2025 • Licenses • Terms • Privacy
       </footer>
     </div>
   );
