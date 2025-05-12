@@ -178,7 +178,7 @@ export const Marksheet = ({ student })  => {
       </div>
       
       {/* Interactive Performance Summary */}
-      <div className="px-6 py-5 border-t border-amber-100 bg-gradient-to-r from-amber-50 to-orange-50">
+      <div className="px-6 py-7 md:mt-3 mt-23 border-t border-amber-100 bg-gradient-to-r from-amber-50 to-orange-50">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
           <div className="flex items-center mb-3 sm:mb-0">
             <span className="font-bold text-lg text-amber-800">Total Score:</span>
@@ -233,11 +233,11 @@ export const Marksheet = ({ student })  => {
           </div>
           
           {/* Progress markers - hidden during print */}
-          {/* <div className={`relative h-0 ${isPrinting ? 'hidden' : ''}`}>
+          <div className={`relative h-0 ${isPrinting ? 'hidden' : ''}`}>
             <div className="absolute -top-1 left-[50%] h-4 w-px bg-amber-300" title="Passing"></div>
             <div className="absolute -top-1 left-[70%] h-4 w-px bg-amber-500" title="Average"></div>
             <div className="absolute -top-1 left-[90%] h-4 w-px bg-amber-700" title="Excellent"></div>
-          </div> */}
+          </div>
         </div>
       </div>
       
