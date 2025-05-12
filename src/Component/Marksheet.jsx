@@ -309,16 +309,16 @@ const ScoreItem = ({ label, score, total, isExpanded, toggleExpand, details }) =
   
   return (
     <div className="mb-5">
-      <div 
-        className="flex justify-between text-sm mb-1 cursor-pointer"
+      <div
+        className="flex flex-col sm:flex-row justify-between text-sm mb-1 cursor-pointer"
         onClick={toggleExpand}
       >
         <span className="text-amber-800 font-medium flex items-center">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            className={`h-3 w-3 mr-1 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`} 
-            fill="none" 
-            viewBox="0 0 24 24" 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className={`h-3 w-3 mr-1 transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`}
+            fill="none"
+            viewBox="0 0 24 24"
             stroke="currentColor"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -326,42 +326,44 @@ const ScoreItem = ({ label, score, total, isExpanded, toggleExpand, details }) =
           {label}
         </span>
         {isNotDeclared ? (
-          <span className="italic text-amber-600 font-medium">Not Declared</span>
+          <span className="italic text-amber-600 font-medium mt-1 sm:mt-0">Not Declared</span>
         ) : (
-          <span className="font-bold text-amber-700">
+          <span className="font-bold text-amber-700 mt-1 sm:mt-0">
             {score} <span className="text-amber-500 font-normal">/ {total}</span>
           </span>
         )}
       </div>
-      
+  
       {/* Score progress bar */}
-      <div className="h-2 bg-amber-100 rounded-full overflow-hidden">
-        {!isNotDeclared && (
-          <div 
-            className={`h-full ${progressColor} transition-all duration-1000 ease-out`} 
+      <div className="h-2 bg-amber-100 rounded-full overflow-hidden w-full">
+        {!isNotDeclared ? (
+          <div
+            className={`h-full ${progressColor} transition-all duration-1000 ease-out`}
             style={{ width: animateProgress ? `${percentage}%` : '0%' }}
           ></div>
-        )}
-        {isNotDeclared && (
+        ) : (
           <div className="h-full bg-amber-200 w-full opacity-30"></div>
         )}
       </div>
-      
+  
       {/* Mini legend for score */}
-      <div className="flex justify-between items-center mt-1">
-        {!isNotDeclared && (
-          <span className={`text-xs ${
-            percentage >= 80 ? 'text-green-600' : 
-            percentage >= 60 ? 'text-green-600' : 
-            percentage >= 40 ? 'text-green-600' : 'text-green-600'
-          }`}>
+      {!isNotDeclared && (
+        <div className="flex justify-between items-center mt-1">
+          <span
+            className={`text-xs ${
+              percentage >= 80
+                ? 'text-green-600'
+                : percentage >= 60
+                ? 'text-yellow-600'
+                : percentage >= 40
+                ? 'text-orange-600'
+                : 'text-red-600'
+            }`}
+          >
             {percentage}%
           </span>
-        )}
-      </div>
-      
-      
-      
+        </div>
+      )}
     </div>
   );
-};
+  

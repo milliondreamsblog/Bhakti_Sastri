@@ -4,7 +4,6 @@ import { Searchbox } from './Component/Searchbox';
 import { Searchresult } from './Component/Searchresult';
 import { Hero } from './Component/Hero';
 import { Marksheet } from './Component/Marksheet';
-
 import { Navbar } from './Component/Navbar';
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
       <Navbar />
 
       {/* Main Content */}
-      <div className="pt-24 flex-1 w-full flex flex-col items-center px-4 md:px-0">
+      <div className="pt-24 flex-1 w-full flex flex-col items-center px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <Hero />
 
@@ -37,7 +36,7 @@ function App() {
 
         {/* Marksheet Section */}
         {selectedStudent && (
-          <div className="mt-10 transition-all duration-500 animate-fadeIn w-920">
+          <div className="mt-10 transition-all duration-500 animate-fadeIn w-full ">
             <Marksheet student={selectedStudent} />
           </div>
         )}
