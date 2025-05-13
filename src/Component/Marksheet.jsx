@@ -70,7 +70,7 @@ export const Marksheet = ({ student })  => {
           <h2 className="text-2xl font-bold text-white tracking-wide">Marksheet</h2>
           <div className="flex space-x-2">
             <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-              <span className="text-white font-medium text-sm">Bhakti Sashtri</span>
+              <span className="text-white font-medium text-sm">Bhakti Shastri</span>
             </div>
             {/* Action buttons - hidden during print */}
             <div className={`${isPrinting ? 'hidden' : 'flex space-x-1'}`}>
@@ -172,7 +172,7 @@ export const Marksheet = ({ student })  => {
             total={10}
             isExpanded={expandedSection === "sloka"}
             toggleExpand={() => toggleSection("sloka")}
-            details="Sloka Test"
+            details="Sloka Test Unit-1 & 2"
           />
         </div>
       </div>
@@ -244,7 +244,7 @@ export const Marksheet = ({ student })  => {
       <div className={`px-6 py-3 text-center ${isPrinting ? 'text-xs text-black font-medium' : 'text-xs text-amber-600 bg-amber-50 italic'}`}>
         {isPrinting ? (
           <div>
-            <p>ISKCON Kanpur Bhakti Sashtri Program - Official Result</p>
+            <p>ISKCON Kanpur Bhakti Shastri Program - Official Result</p>
             <p>Generated on {new Date().toLocaleDateString()}</p>
           </div>
         ) : (

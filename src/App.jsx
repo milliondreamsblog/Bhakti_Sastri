@@ -5,7 +5,7 @@ import { Searchresult } from './Component/Searchresult';
 import { Hero } from './Component/Hero';
 import { Marksheet } from './Component/Marksheet';
 import { Navbar } from './Component/Navbar';
-import imagebg from './assets/image.png';
+import imagebg from './assets/im2.png';
 
 function App() {
   const [resultList, setResultList] = useState([]);
@@ -20,7 +20,6 @@ function App() {
   <>
     <Navbar/> 
     <div
-        style={{ backgroundImage: `url(${imagebg})` }}
         className="bg-cover bg-center min-h-screen bg-gradient-to-br from-slate-100 to-gray-300 flex flex-col">
 
 
@@ -51,7 +50,7 @@ function App() {
 
         {/* Footer */}
         <footer className="py-4 text-center text-gray-500 text-sm mt-10">
-          © {new Date().getFullYear()} © Iskcon Kanpur 2025 • Licenses • Terms • Privacy
+          © {new Date().getFullYear()} © ISKCON Kanpur 2025 • Licenses • Terms • Privacy
         </footer>
     </div>
   </>

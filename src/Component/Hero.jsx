@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Hero = () => {
   return (
-    <div className='text-2xl m-3  text-white'><h3>Enter your name below to check your result.</h3></div>
+    <div className='text-2xl m-3  text-blcak'><h3>Enter your name below to check your result.</h3></div>
   )
 }
